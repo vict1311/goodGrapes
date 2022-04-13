@@ -3,29 +3,39 @@ package com.example.goodgrapes;
 import java.util.ArrayList;
 
 public class UserLibrary {
-    //we define attributes of the library
+    /*
+    * ID of a specific Library
+     */
     public int userIDLib;
-    //we remember to use the wrapper class Integer here
-    public ArrayList<Integer> wineList = new ArrayList<Integer>();
+    /*
+    * ArrayList of Wines in a specific UserLibrary
+    * we remember to use the wrapper class Integer here
+     */
+    public ArrayList<String> winesInLib = new ArrayList<String>();
 
-    public UserLibrary(User user, ArrayList<Integer> wineList) {
-        this.wineList = wineList;
+    /*
+    * Constructor for a UserLibrary
+    * @param a User who should be associated with the library by their ID
+     */
+    public UserLibrary(User user) {
+        this.winesInLib = new ArrayList<String>();
         userIDLib = user.userID;
     }
 
-    public void createLibrary() {
-        ArrayList<UserLibrary> userLibraries = new ArrayList<UserLibrary>();
-        //TODO 1. make createLibrary, 2. add wines to a library, simulate a run,
-    }
-
-    public void browseLibrary() {
-        //create wineList using createWines() method
-        ArrayList<Wine> wineList = Wine.createWines();
-        //for loop to iterate over all wines in wineList
-        for (int i = 0; i < wineList.size(); i++) {
-            Wine tempWine = wineList.get(i);
-            System.out.println(tempWine.name);
-            System.out.println(tempWine.year);
+    /*
+    * browseLibrary() finds all wines in a user's library to be shown
+    * @return ArrayList of Wines
+    * create winesInLib using createWines() method
+    * for loop to iterate over all wines in winesInLib
+    * use findWine to check for the Wine objects that have the same IDs as the one in the UserLibrary
+     */
+    public ArrayList<Wine> browseLibrary() {
+        ArrayList<Wine> winesToPrint = new ArrayList<Wine>();
+        for (int i = 0; i < winesInLib.size(); i++) {
+            String tempWine = winesInLib.get(i);
+            Wine newWineToAdd = Wine.findWine(tempWine);
+            winesToPrint.add(newWineToAdd);
         }
+        return winesToPrint;
     }
 }
