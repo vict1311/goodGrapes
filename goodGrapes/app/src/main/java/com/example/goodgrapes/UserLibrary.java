@@ -3,26 +3,26 @@ package com.example.goodgrapes;
 import java.util.ArrayList;
 
 public class UserLibrary {
-    /*
+    /**
     * ID of a specific Library
      */
     public int userIDLib;
-    /*
+    /**
     * ArrayList of Wines in a specific UserLibrary
     * we remember to use the wrapper class Integer here
      */
     public ArrayList<String> winesInLib = new ArrayList<String>();
 
-    /*
+    /**
     * Constructor for a UserLibrary
-    * @param a User who should be associated with the library by their ID
+    * @param user who should be associated with the library by their ID
      */
     public UserLibrary(User user) {
         this.winesInLib = new ArrayList<String>();
         userIDLib = user.userID;
     }
 
-    /*
+    /**
     * browseLibrary() finds all wines in a user's library to be shown
     * @return ArrayList of Wines
     * create winesInLib using createWines() method

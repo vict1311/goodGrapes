@@ -5,18 +5,22 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.ArrayList;
 
 public class User {
-    /*
+    /**
     * userID identifies a User
-    * name is their name
-    * username is the username to be used for log-ins
-    * password is the password to be used for log-ins
      */
     public int userID;
+    /** * name is their name
+     */
     public String name;
+    /** * username is the username to be used for log-ins
+
+     *
     private String username;
+     /** * password is the password to be used for log-ins
+     */
     private String password;
 
-    /* constructor that sets object attributes as those given as parameters
+    /** constructor that sets object attributes as those given as parameters
     * @param userID is the ID of a User
     * @param name is the User's name
     * @param username is the username
@@ -31,7 +35,7 @@ public class User {
 
     }
 
-    /* createUsers() is a method to create users and add these to an ArrayList of users
+    /** createUsers() is a method to create users and add these to an ArrayList of users
     * @return an ArrayList of Users
      */
     public static ArrayList<User> createUsers() {
@@ -45,9 +49,9 @@ public class User {
         return userList;
     }
 
-    /*
+    /**
     * createLibraries() is a method to create a library for every user
-    * @param UserList is a list of Users created by createUsers()
+    * @param userList is a list of Users created by createUsers()
     * @return an ArrayList of UserLibraries
     * for loop to get a specific User that has been created and construct a UserLibrary using that as a parameter
     * add this library to LibraryList and return it

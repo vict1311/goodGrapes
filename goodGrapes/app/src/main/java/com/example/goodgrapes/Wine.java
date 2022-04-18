@@ -5,14 +5,32 @@ import java.util.ArrayList;
 public class Wine {
 
     //wineID is a String, because we need to use remove() and if it is an int, it removes position not object
+    /**
+     * ID for a specific wine
+     */
     public String wineID;
+    /**
+     * name of the wine
+     */
     public String name;
+    /**
+     * the type of wine (red, wine, etc.)
+     */
     public String type;
+    /**
+     * the grape of the wine
+     */
     public String grape;
+    /**
+     * the year the wine was produced
+     */
     public int year;
+    /**
+     * libSaved checks for the wine being saved in the user's library (this is done during runtime as a local variable)
+     */
     public boolean libSaved;
 
-    /* constructor to create Wine objects
+    /** constructor to create Wine objects
     * @param wineID is a string that is the ID of the wine
     * @param name is a String defining the name
     * @param grape is the grape sort of a Wine
@@ -31,7 +49,7 @@ public class Wine {
         libSaved = false;
     }
 
-    /*
+    /**
     * createWines() handles creating the different Wines of our system
     * sources are from Winefamly.com
     * @return ArrayList of Wines that is added to for every object created
@@ -47,7 +65,7 @@ public class Wine {
         return wineList;
     }
 
-    /*
+    /**
     * Method browseAllWines() gets all wines in the system using createWines()
     * @return ArrayList of Wines
      */
@@ -56,7 +74,7 @@ public class Wine {
         return allWines;
     }
 
-    /*
+    /**
     * Method addWineToLibrary() lets users add a Wine to UserLibrary
     * @param wine is a Wine object to be added
     * @param userLib is a UserLibrary the Wine is added to
@@ -66,7 +84,7 @@ public class Wine {
         userLib.winesInLib.add(wine.wineID);
     }
 
-    /*
+    /**
     *Method removeWineFromLibrary() lets users remove a Wine from UserLibrary
     * @param wine is a Wine object to be removed
     * @param userLib is a UserLibrary the Wine is removed from
@@ -76,7 +94,7 @@ public class Wine {
         userLib.winesInLib.remove(wine.wineID);
     }
 
-    /*
+    /**
     *Method findWine() looks for a specific wine in all created Wines
     * @param wineID is a String to be looked for
     * createWines() generates full list of all Wines
