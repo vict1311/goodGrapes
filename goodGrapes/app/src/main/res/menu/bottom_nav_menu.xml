@@ -3,24 +3,24 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/Search"
+        android:icon="@drawable/search"
         android:iconTint="@color/black"
         android:title="Search" />
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/Search"
+        android:icon="@drawable/favorites"
         android:iconTint="@color/black"
-        android:title="Search" />
+        android:title="Camera" />
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/Favorites"
+        android:icon="@drawable/profile1"
         android:title="Favorites" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/Profile1"
+        android:icon="@drawable/profile1"
         android:title="Profile" />
 
 
