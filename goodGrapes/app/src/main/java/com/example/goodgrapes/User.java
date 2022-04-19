@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.ArrayList;
 
 public class User {
+
     /**
     * userID identifies a User
      */
@@ -13,9 +14,10 @@ public class User {
      */
     public String name;
     /** * username is the username to be used for log-ins
+      */
 
-     *
-    private String username;
+     private String username;
+    /**
      /** * password is the password to be used for log-ins
      */
     private String password;
